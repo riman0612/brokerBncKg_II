@@ -1,0 +1,87 @@
+
+
+/*****************************************desktop navbar****************************************/
+@media (max-width: 991px) {
+	.desktopNavbarWrapper {
+		display: none;
+	}
+}
+/*****************************************END of desktop navbar****************************************/
+
+/*****************************************mobile navbar****************************************/
+@media (min-width: 992px) {
+	.mobileNavbarWrapper, .mobileNavbarSpace {
+		display: none;
+	}
+}
+/*****************************************END of mobile navbar****************************************/
+
+/*****************************************logo and buttons****************************************/
+@media (max-width: 1199px) {
+	.logoAndButtonsContainer {
+		flex-direction: column;
+		padding-bottom: 24px;
+	}
+	.fourBtnWrapper {
+		margin-left: 0;
+		margin-top: 5px;
+		width: 718px;
+	}
+}
+@media (max-width: 991px) {
+	.fourBtnWrapper {
+		width: 670px;
+	}
+}
+@media (max-width: 767px) {
+	.fourBtnWrapper {
+		width: 325px;
+	}
+	.marginBtn {
+		margin-bottom: 22px;	
+	}
+}	
+/*****************************************END of logo and buttons****************************************/
+
+/*****************************************first page cards panel****************************************/
+@media (max-width: 991px) {
+	.bigCol {
+		width: 100%;
+		margin-bottom: 50px;
+	}
+	.secondColNav {
+		border-radius: 0 5px 5px 0;
+	}
+	.thirdColNav {
+		border-radius: 5px 0 0 5px;
+	}
+	.hiddenColNavNCardVertLine992 {
+		display: none;
+	}
+	.noMarginBottom {
+		margin-bottom: 0;
+	}
+}
+@media (max-width: 596px) {
+	.firstBigCol {
+		margin-bottom: 0;	
+	}	
+	.smCol {
+		width: 100%;
+		margin-bottom: 30px;
+	}
+	.marginBetweenSmCol {
+		margin-bottom: 62px;
+	}
+	.firstColNav, .secondColNav,
+	.thirdColNav, .forthColNav {
+		border-radius: 5px;
+	}
+	.hiddenColNavNCardVertLine596 {
+		display: none;
+	}
+	.lastSmCol {
+		margin-bottom: 0;
+	}
+}
+/*****************************************END of first page cards panel****************************************/
