@@ -10,7 +10,7 @@
 
 /*****************************************mobile navbar****************************************/
 @media (min-width: 992px) {
-	.mobileNavbarWrapper, .mobileNavbarSpace {
+	.mobileNavbarWrapper, .mobileNavbarSpace, .secondPageMobileNavbarWrapper {
 		display: none;
 	}
 }
@@ -27,6 +27,10 @@
 		margin-top: 5px;
 		width: 718px;
 	}
+	.twoBtnWrapper {
+		margin-top: 5px;
+		margin-right: 0;
+	}
 }
 @media (max-width: 991px) {
 	.fourBtnWrapper {
@@ -41,9 +45,14 @@
 		margin-bottom: 22px;	
 	}
 }	
+@media (max-width: 555px) {
+	.twoBtnWrapper {
+		width: 325px;	
+	}
+}
 /*****************************************END of logo and buttons****************************************/
 
-/*****************************************first page cards panel****************************************/
+/*****************************************first and second page cards panel****************************************/
 @media (max-width: 991px) {
 	.bigCol {
 		width: 100%;
@@ -60,6 +69,10 @@
 	}
 	.noMarginBottom {
 		margin-bottom: 0;
+	}
+
+	.secondPageNavbarRow, .searchBarWrapper {
+		display: none;
 	}
 }
 @media (max-width: 596px) {
@@ -84,4 +97,4 @@
 		margin-bottom: 0;
 	}
 }
-/*****************************************END of first page cards panel****************************************/
+/*****************************************END of first and second page cards panel****************************************/

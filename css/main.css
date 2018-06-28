@@ -3,6 +3,7 @@
 /*****************************************Global****************************************/
 body {
 	font-family: 'Ubuntu', sans-serif;
+	height: 4000px;
 }
 a:hover {
 	text-decoration: none;
@@ -132,6 +133,13 @@ a:hover {
 	height: 40px;
 	box-shadow: 0px 7px 13px 0px rgba(209,209,209,1);
 }
+
+.twoBtnWrapper {
+	display: flex;
+	justify-content: space-between;
+	width: 376px;
+	margin-right: 35px;
+}
 /*****************************************END of logo and buttons****************************************/
 
 /*****************************************first page cards panel****************************************/
@@ -141,6 +149,7 @@ a:hover {
 }
 .firstPageCardsPanelContainer {
 	display: flex;
+	justify-content: center;
 	padding: 0;
 	flex-wrap: wrap;
 }
@@ -274,6 +283,98 @@ a:hover {
 	border-radius: 0 5px 5px 0;
 }
 /*****************************************END of first page cards panel****************************************/
+
+/*****************************************second page cards panel****************************************/
+.secondPageNavbarRow {
+	display: flex;
+	width: 100%;
+	border-radius: 5px;
+	overflow: hidden;
+	margin-bottom: 20px;
+}
+.secondPageNavbarRow a {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 40px;
+	background: #ffffffc7;
+	flex: 1;
+	color: black;
+	font-size: 15px;
+	position: relative;
+	transition: .3s;
+}
+.secondPageNavbarRow a:hover {
+	background: #fffffff2;
+}
+.searchBarWrapper {
+	display: flex;
+	max-height: 38px;
+}
+.searchBarPadding {
+	padding: 0 9px;
+	border-radius: 5px;
+	background: #ececec;
+	margin-right: 8px;
+}
+.searchBarWrapper input {
+	height: 100%;
+	border: none;
+	width: 340px;
+	background: #ececec;
+	outline: none;
+}
+
+.secondPageMobileNavbarWrapper {
+	height: 264px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.secondPageMobileNavbarWrapper a {
+	display: flex;
+	border-radius: 5px;
+	height: 40px;
+	width: 270px;
+	background: #ffffffc7;
+	transition: .3s;
+	color: black;
+	align-items: center;
+	justify-content: center;
+}
+.secondPageMobileNavbarWrapper a:hover {
+	background: #fffffff2;
+}
+/*****************************************END of second page cards panel****************************************/
+
+/*****************************************second page bread crumbs****************************************/
+.breadCrumbsWrapper {
+	height: 64px;
+	background: #E3E5E4;
+	display: flex;
+	align-items: center;
+	margin: 25px auto;
+}
+.breadCrumbsWrapper a {
+	margin-right: 8px;
+	color: black;
+}
+/*****************************************END of second page bread crumbs****************************************/
+
+/*****************************************second page category****************************************/
+.categoryWrapper {
+	height: 40px;
+	background: #383838;
+	color: white;
+	border-radius: 5px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 200px;
+	margin-bottom: 50px;
+	box-shadow: 0px 7px 13px 0px rgba(209,209,209,1);
+}
+/*****************************************END of second category****************************************/
 
 /*****************************************footer****************************************/
 .footerContainer {
