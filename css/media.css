@@ -98,3 +98,14 @@
 	}
 }
 /*****************************************END of first and second page cards panel****************************************/
+
+/*****************************************second page main content****************************************/
+@media (max-width: 991px) {
+	.secondPageMainContentWrapper {
+		flex-direction: column;
+	}
+	.centerCards {
+		width: 100%;
+	}
+}
+/*****************************************END of second page main content****************************************/

@@ -3,11 +3,16 @@
 /*****************************************Global****************************************/
 body {
 	font-family: 'Ubuntu', sans-serif;
-	height: 4000px;
+	/*height: 4000px;*/
 }
 a:hover {
 	text-decoration: none;
 }
+ul {
+	list-style: none;
+	padding: 0;
+}
+
 /*****************************************END of Global****************************************/
 
 /*****************************************desktop navbar****************************************/
@@ -370,11 +375,118 @@ a:hover {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	text-align: center;
+	line-height: 14px;
 	width: 200px;
 	margin-bottom: 50px;
 	box-shadow: 0px 7px 13px 0px rgba(209,209,209,1);
 }
 /*****************************************END of second category****************************************/
+
+/*****************************************second page main content****************************************/
+.secondPageMainContentWrapper {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 50px;
+}
+.menuLeft {
+	background: #494B4A;
+	padding: 40px 30px;
+	min-width: max-content;
+}
+.menuLeft li {
+	color: white;
+	margin: 10px 0;
+	min-width: max-content;
+}
+.menuLeft li:hover {
+	text-decoration: underline;
+}
+
+.centerCards {
+	width: 285px;
+	box-shadow: 0 0 10px #ccc;
+}
+.centerCards h5 {
+	font-size: 17px;
+	text-align: center;
+	margin-top: 5px;
+}
+.centerCards img {
+	width: 100%;
+}
+.centerCards span {
+	font-size: 20px;
+	text-align: center;
+	background: #67A5B4;
+	padding: 15px 30px;
+	border-radius: 5px;
+	color: #fff;
+	position: relative;
+	top: -15px;
+	left: 55px;
+}
+.centerCards p {
+	margin-top: 10px;
+	text-align: center;
+	line-height: 10px;
+}
+.centerCards button {
+	margin-top: 10px;
+	text-align: center;
+	background: #FF9501;
+	border: 1px solid #FE7600;
+	text-transform: uppercase;
+	width: 100%;
+	padding: 10px 0;
+	cursor: pointer;
+}
+.centerCards a {
+	color: #fff;
+}
+
+.howItWorks {
+	padding: 15px;
+	background: #eeeeee;
+	border: 1px solid #dbdbdb;
+	box-sizing: border-box;
+	border-radius: 3px;
+	width: 250px;
+	display: flex;
+	flex-direction: column;
+	height: min-content;
+}
+.howItWorks span {
+	font-size: 21px;
+	text-decoration: underline;
+	margin-bottom: 19px;
+}
+.howItWorks a {
+	font-size: 13px;
+	color: white;
+	height: 39px;
+	margin-bottom: 20px;
+	border-radius: 5px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.howItWorks a:nth-last-child(1) {
+	margin-bottom: 0;
+}
+.howItWorksFirstBtn {
+	background: #BA3C3D;
+}
+.howItWorksSecondBtn {
+	background: #3A9653;
+}
+.howItWorksThirdBtn {
+	background: #E68B30;
+}
+.howItWorksForthBtn {
+	background: #28769D;
+}
+/*****************************************END of second page main content****************************************/
 
 /*****************************************footer****************************************/
 .footerContainer {
