@@ -18,6 +18,43 @@
 <body>
 
 
+	<!-- модальное окно на "купить" -->
+	<div class="modal fade" id="justBuy" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLongTitle">Купить бизнес</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<form>
+					<div class="modal-body">
+						<div class="row justify-content-center mb-3">
+							<input required type="text" class="form-control col-8" id="recipient-name" placeholder="Имя">
+						</div>
+						<div class="row justify-content-center mb-3">
+							<input required type="text" class="form-control col-8" id="recipient-name" placeholder="Ваш номер телефона">
+						</div>
+						<div class="row justify-content-center mb-4">
+							<input required type="text" class="form-control col-8" id="recipient-name" placeholder="E-mail">
+						</div>
+						<div class="row justify-content-center">
+							<label for="">
+								<input type="checkbox">
+								Согласен на обработку <a href="#">персональных данных</a>
+							</label>
+						</div>
+					</div>
+					<div class="modal-footer justify-content-center border-0 pt-0">
+						<a href="#"><button type="submit" class="btn btn-success">Отправить</button></a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+
 	<!-- desktop navbar	 -->
 	<div class="desktopNavbarWrapper">
 		<div class="container desktopNavbarContainer">
@@ -48,7 +85,7 @@
 				<img src="img/logo.jpg">
 			</a>
 			<div class="twoBtnWrapper">
-				<a href="#">
+				<a data-toggle="modal" data-target="#justBuy">
 					<button class="btn btn-danger btnSell">Заявка на покупку</button>
 				</a>
 				<a href="#">
@@ -86,10 +123,10 @@
 			</div>
 
 			<div class="secondPageMobileNavbarWrapper">
-				<a href="#">Готовый бизнес</a>
-				<a href="#">Бизнес - Актив</a>
-				<a href="#">Бартер</a>
-				<a href="#">Коммерческая недвижимость</a>
+				<a href="ready_business.html">Готовый бизнес</a>
+				<a href="business-acitve.html">Бизнес - Актив</a>
+				<a href="barter.html">Бартер</a>
+				<a href="commercial_estate.html">Коммерческая недвижимость</a>
 			</div>
 		</div>
 	</div>
