@@ -25,6 +25,8 @@ ul {
     border-top: none;
     padding: 30px;
     background: white;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
 } 
 .entrance2, .registration {
     background: #dcdcdc;
