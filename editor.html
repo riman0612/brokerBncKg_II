@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>editor</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/hamburgers.css">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/editor.css">
+	<link rel="stylesheet" href="css/2page/media.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/media.css">
+</head>
+<body>
+
+
+
+	<div class="modal fade" id="entrance" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header border-0">
+					<h5 class="modal-title" id="exampleModalLongTitle">Вход</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div class="row justify-content-center mb-3">
+						<input type="text" class="form-control col-8" id="recipient-name" placeholder="Email">
+					</div>
+					<div class="row justify-content-center">
+						<input type="text" class="form-control col-8" id="recipient-name" placeholder="Пароль">
+					</div>
+				</div>
+				<div class="modal-footer justify-content-center border-0">
+					<button type="button" class="btn btn-success">Вход</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- Регистрация -->
+	<div class="modal fade" id="registration" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header border-0">
+					<h5 class="modal-title"  id="exampleModalLongTitle">Регистрация</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div class="row">
+						<div class="form-group col-6">
+							<label for="recipient-name" class="col-form-label">Имя:</label>
+							<input type="text" class="form-control" id="recipient-name">
+						</div>
+						<div class="form-group col-6">
+							<label for="recipient-name" class="col-form-label">Фамилия:</label>
+							<input type="text" class="form-control" id="recipient-name">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="recipient-name" class="col-form-label">Email адресс:</label>
+						<input type="text" class="form-control" id="recipient-name">
+					</div>
+					<div class="form-group">
+						<label for="recipient-name" class="col-form-label">Пароль:</label>
+						<input type="text" class="form-control" id="recipient-name">
+					</div>
+				</div>
+				<div class="modal-footer justify-content-center border-0">
+					<button type="button" class="btn btn-success">Регистрация</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Заказ звонка -->
+	<div class="modal fade" id="callOrder" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header border-0">
+					<h5 class="modal-title" id="exampleModalLongTitle">Заказ звонка</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div class="row justify-content-center">
+						<input type="text" class="form-control col-8" id="recipient-name" placeholder="Ваш номер телефона">
+					</div>
+				</div>
+				<div class="modal-footer justify-content-center border-0">
+					<button type="button" class="btn btn-success">Заказать</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- oneMoreSkipNav -->
+	<div class="skipNavigation d-block d-lg-none">
+		<div class="container">
+			<div class="row flex-nowrap justify-content-end">
+				<div class="inputMainWrapper">
+					<div class="col">
+						<div class="inputWrapper">
+							<input type="text">
+						</div>
+					</div>
+					<button class="btn btn-sm btn-warning">Поиск</button>
+				</div>
+				<div class="hamburgerWrapper">
+					<button aria-pressed="true" class="hamburger active hamburger--collapse"   aria-haspopup="true" aria-expanded="false"" type="button">
+						<span class="hamburger-box">
+							<span class="hamburger-inner"></span>
+						</span>
+					</button>
+				</div>
+			</div>
+			</div>
+		</div>
+	</div>
+	<div class="skipNavigationSpace d-block d-lg-none"></div>
+	
+	<div class="container mainSkipMenu px-0">
+		<div class="container skipMenuContainer px-0">
+
+			<ul class="skipMenu mt-1">
+
+				<a data-toggle="modal" data-target="#entrance" href="#"><li>
+					<i class="fas fa-sign-in-alt mr-2"></i>
+					вход
+				</li>
+			</a><div class="underline"></div>
+			<a data-toggle="modal" data-target="#registration" href="#"><li>
+				<i class="far fa-registered mr-2"></i>
+				регистрация покупателя
+			</li></a>
+		</ul>
+	</div>
+</div>
+
+	<div class="firstNav align-items-center d-none d-lg-flex">
+		<div class="container">
+			<div class="row navRow">
+				<ul class="nav ulNav align-items-center justify-content-between">
+					
+					<div class="aboutUsAndCallWrapper">
+						<a href="http://www.bnc.kg/"><li class="nav-item">
+							О нас
+						</li></a><div class="line"></div>
+						<a data-toggle="modal" data-target="#callOrder" href="#" class="call">Заказ звонка</a>
+					</div>
+					<!-- d-none d-xl-flex -->
+					<li class="entrance nav-item ">
+						<a data-toggle="modal" data-target="#entrance" style="font-family: 'Open Sans', sans-serif;" href="#">вход</a><div class="line linePadding"></div>
+						<a data-toggle="modal" data-target="#registration" style="font-family: 'Open Sans', sans-serif;" href="#">регистрация</a>
+					</li>
+					
+				</ul>
+			</div>			
+		</div>
+	</div>
+
+	<div class="container rori">
+		<div class="row no-gutters align-items-center justify-content-between">
+			<a href="index.html" class="">
+				<img src="img/logo.jpg">
+			</a>
+			<!-- <div class="btnWrapper">
+				<a href="#"><button class="btn marginBtn btn-sell btn-danger">ПРОДАТЬ</button></a>
+				<a href="#"><button class="btn marginBtn btn-success">КУПИТЬ</button></a>
+				<a href="#"><button class="btn btn-sell btn-danger">ОБМЕН</button></a>
+				<a href="#"><button class="btn investitionButton btn-success"><div class="investitionButtonTextWrapper">ИЩУ ИНВЕСТИЦИИ</div></button></a>
+			</div> -->
+		</div>
+	</div>
+
+
+	
+	<div class="listingMainContainer">
+		
+	</div>
+
+	<div class="listingMainContainer">
+		<div class="container">
+			<div class="navigation">
+				<ul>
+					<li><a href="#">Главная > </a></li>
+					<li><a href="#">editor </a></li>
+				</ul>
+			</div>
+			<div class="listingWord">
+				editor
+			</div>			
+		</div>
+	</div>	
+	
+	<!-- готовый бизнес -->
+
+
+	<!-- готовый бизнес -->
+	
+	<!-- <div class="listingMainContainer">
+		<div class="container">
+			<div class="listingWord">
+			
+			</div>
+			<div class="bizActivesCardsContainer">
+				
+			</div>
+			<div class="row justify-content-center">
+				
+			</div>
+
+		</div>
+	</div> -->
+
+	<div class="editorContainer container">
+		<div class="editorWrapper">
+			<ul class="editorSidebar">
+				<a href="editor.html" style="background: #757474;">
+					<i class="fas fa-plus-circle"></i>
+					<li>
+						Добавить	
+					</li>
+					<div class="angle"></div>
+				</a>
+				<a href="editorChange.html">
+					<i class="fas fa-edit"></i>
+					<li>
+						Изменить	
+					</li>
+				</a>
+				<a href="editorDelete.html">
+					<i class="fas fa-trash-alt"></i>
+					<li>
+						Удалить	
+					</li>
+				</a>
+				<a href="editorAddCategory.html">
+					<i class="fas fa-plus"></i>
+					<li>
+						Добавить	категорию
+					</li>
+				</a>
+			</ul>
+			<div class="editorMainWindow">
+				<div class="container editorMainWindowContainer">
+					<div class="row mb-5 justify-content-center">
+						<div class="col-5">Название:</div>
+						<input type="text" class="col-5 form-control">
+					</div>
+					<div class="row mb-5 justify-content-center">
+						<div class="col-5">Цена:</div>
+						<input type="text" class="col-5 form-control">
+					</div>
+					<div class="row mb-5 justify-content-center">
+						<div class="col-5">Доходность:</div>
+						<input type="text" class="col-5 form-control">
+					</div>
+					<div class="row mb-5 justify-content-center">
+						<div class="col-5">Окупаемость:</div>
+						<input type="text" class="col-5 form-control">
+					</div>
+					<div class="row mb-5 justify-content-center">
+						<div class="col-5">Прибыль:</div>
+						<input type="text" class="col-5 form-control">
+					</div>
+					<div class="row mb-5 justify-content-center">
+						<div class="col-5">Описание:</div>
+						<textarea type="text" class="col-5 form-control"></textarea>
+					</div>
+					<div class="row mb-5 justify-content-center">
+						<div class="col-5">Фото:</div>
+						<!-- <input type="text" class="col-5 form-control"> -->
+						<div class="custom-file col-5">
+							<input type="file" class="custom-file-input" id="customFile" onchange="$(this).next().after().text($(this).val().split('\\').slice(-1)[0])">
+							<label class="custom-file-label" for="customFile">Выберите файл</label>
+						</div>
+					</div>
+					<div class="row mb-5 justify-content-center">
+						<div class="col-5">Брокер объекта:</div>
+						<select class="col-5 form-control">
+							<option>Бишкек</option>
+							<option>Тилек Эралиев</option>
+							<option>Мурат Дюшебаев</option>
+							<option>Ринат Рахимов</option>
+							<option>Тилек Эралиев</option>
+						</select>
+					</div>
+					<div class="row mb-5 justify-content-center">
+						<div class="col-5">Город:</div>
+						<input type="text" class="col-5 form-control">
+					</div>
+					<div class="row mb-5 justify-content-center">
+						<div class="col-5">Район:</div>
+						<input type="text" class="col-5 form-control">
+					</div>
+					<div class="row mb-5 justify-content-center">
+						<div class="col-5">Раздел:</div>
+						<input type="text" class="col-5 form-control">
+					</div>
+					<div class="row mb-5 justify-content-center">
+						<div class="col-5">Среднемесячные обороты:</div>
+						<input type="text" class="col-5 form-control">
+					</div>
+					<div class="row mb-5 justify-content-center">
+						<div class="col-5">Среднемесячные расходы:</div>
+						<input type="text" class="col-5 form-control">
+					</div>
+					<div class="row mb-5 justify-content-center">
+						<div class="col-5">Количество работников:</div>
+						<input type="text" class="col-5 form-control">
+					</div>
+					<div class="row mb-5 justify-content-center">
+						<div class="col-5">Фонд з/п:</div>
+						<input type="text" class="col-5 form-control">
+					</div>
+					<div class="row mb-5 justify-content-center">
+						<div class="col-5">Площадь помещений:</div>
+						<input type="text" class="col-5 form-control">
+					</div>
+					<div class="row mb-5 justify-content-center">
+						<div class="col-5">Стоимость аренды:</div>
+						<input type="text" class="col-5 form-control">
+					</div>
+					<div class="row mb-5 justify-content-center">
+						<div class="col-5">Возраст бизнеса:</div>
+						<input type="text" class="col-5 form-control">
+					</div>
+					<div class="row mb-5 justify-content-center">
+						<div class="col-5">Организационно-правовая форма:</div>
+						<input type="text" class="col-5 form-control">
+					</div>
+					<div class="row justify-content-center">
+						<button class="btn btn-success">Сохранить</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="footerContainer">
+		<div class="container">
+			Представленные на сайте данные имеют информационный характер и не являются публичной офертой.
+		</div>
+	</div>
+
+	<!-- <div class="container">
+		<div class="contTemp">
+		
+		</div>	
+	</div> -->
+	
+
+	<script src="js/jquery.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="js/bootstrap.js"></script>
+	<script src="js/script.js"></script>
+</body>
+</html>

@@ -15,6 +15,37 @@ ul {
 
 /*****************************************END of Global****************************************/
 
+/*****************************************модальное окно на Вход и на Регистрацию (2 в 1)****************************************/
+.modalWrapper li {
+	flex: 1;
+}
+.borderWindow {
+    padding: 30px 0;
+    border: 1px solid #dee2e6;
+    border-top: none;
+    padding: 30px;
+    background: white;
+} 
+.entrance2, .registration {
+    background: #dcdcdc;
+    color: black;
+    text-align: center;
+}
+.entranceAndRegistrationform {
+	display: flex;
+	flex-direction: column;
+}
+.entranceAndRegistrationform button {
+	width: min-content;
+	align-self: center;
+}
+.noBackground {
+	background: none !important;
+}
+/*****************************************END of модальное окно на Вход и на Регистрацию (2 в 1)****************************************/
+
+
+
 /*****************************************desktop navbar****************************************/
 .desktopNavbarWrapper {
 	height: 40px;
@@ -86,6 +117,23 @@ ul {
 .entranceAndRegistrationWrapper .line {
 	border-right: 2px solid white;
 	height: 16px;
+}
+.entranceImg {
+	color: white;
+	font-size: 21px;
+	cursor: pointer;
+}
+.entranceImg:hover {
+	text-decoration: underline;
+}
+.entranceImg i {
+	margin-left: 13px;
+}
+.entranceImg span {
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 15px;
+	position: relative;
+	top: -3px;
 }
 /*****************************************END of desktop navbar****************************************/
 

@@ -17,6 +17,66 @@
 </head>
 <body>
 	
+	<!-- модальное окно на Вход и на Регистрацию (2 в 1) -->
+	<div class="modal fade" id="registration2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content noBackground">
+				<!-- <div class="modal-body"> -->
+					<!-- <hr> -->
+					<div class="modalWrapper">
+						<ul class="nav nav-tabs">
+							<li class="nav-item">
+								<a class="nav-link active entrance2" href="#home">Вход</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link registration" href="#profile">Регистрация</a>
+							</li>
+						</ul>
+						<div class="tab-content">
+							<!-- <div class="tab-pane active entrance" id="home">Вкладка вход</div> -->
+							<div role="tabpanel" class="tab-pane  borderWindow active" id="home">
+								<form class="entranceAndRegistrationform">
+									<div class="row justify-content-center mb-4 mt-3">
+										<input type="text" class="form-control col-8" id="recipient-name" placeholder="Email">
+									</div>
+									<div class="row justify-content-center mb-4">
+										<input type="text" class="form-control col-8" id="recipient-name" placeholder="Пароль">
+									</div>
+									<button type="submit" class="btn btn-success">Вход</button>	
+								</form>
+							</div>
+							
+							<div role="tabpanel" class="tab-pane  borderWindow " id="profile">
+								<form class="entranceAndRegistrationform">
+									<div class="row">
+										<div class="form-group col-6">
+											<label for="recipient-name" class="col-form-label">Имя:</label>
+											<input type="text" class="form-control" id="recipient-name">
+										</div>
+										<div class="form-group col-6">
+											<label for="recipient-name" class="col-form-label">Фамилия:</label>
+											<input type="text" class="form-control" id="recipient-name">
+										</div>
+									</div>
+									<div class="form-group">
+										<label for="recipient-name" class="col-form-label">Email адресс:</label>
+										<input type="text" class="form-control" id="recipient-name">
+									</div>
+									<div class="form-group mb-4">
+										<label for="recipient-name" class="col-form-label">Пароль:</label>
+										<input type="text" class="form-control" id="recipient-name">
+									</div>
+									<button type="submit" class="btn btn-success">Регистрация</button>	
+								</form>
+							</div>
+						</div>
+					</div>
+
+					
+				</div>
+			</div>
+		</div>
+
 	<!-- модальное окно на Вход -->
 	<div class="modal fade" id="entrance" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
 		<div class="modal-dialog modal-dialog-centered" role="document">
@@ -255,11 +315,16 @@
 				<a data-toggle="modal" data-target="#callOrder" class="callOrder">Заказ звонка</a>
 			</div>
 
-			<div class="entranceAndRegistrationWrapper">
-				<a data-toggle="modal" data-target="#entrance"><span>вход</span></a>
+			<!-- <div class="entranceAndRegistrationWrapper">
+				<a data-toggle="modal" data-target="#registration2"><span>вход</span></a>
 				<div class="line"></div>
-				<a data-toggle="modal" data-target="#registration"><span>регистрация</span></a>
-			</div>
+				<a data-toggle="modal" data-target="#registration2"><span>регистрация</span></a>
+			</div> -->
+			<a data-toggle="modal" data-target="#registration2">
+				<div class="entranceImg">
+					<span>вход</span><i class="fas fa-sign-in-alt"></i>
+				</div>
+			</a>
 		</div>
 	</div>
 

@@ -104,3 +104,8 @@ document.querySelector('.firstPageCardsPanelContainer').onmouseout = (e) => {
         // console.log("e.target.querySelector('.opacityLayerBackground').style.opacity = 1;");
     };
 };
+
+$('.nav-tabs a').on('click', function (e) {
+  e.preventDefault()
+  $(this).tab('show')
+})
