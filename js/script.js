@@ -1,15 +1,4 @@
-// Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyBTRkVT7tbugUbV0PGumc4RdGKCZby_DNc",
-    authDomain: "tempproject-9e7ae.firebaseapp.com",
-    databaseURL: "https://tempproject-9e7ae.firebaseio.com",
-    projectId: "tempproject-9e7ae",
-    storageBucket: "tempproject-9e7ae.appspot.com",
-    messagingSenderId: "682367898884"
-  };
-  firebase.initializeApp(config);
 
-  var messagesRef = firebase.database().ref('messages');
 // $('#myModal').on('shown.bs.modal', function () {
 //   $('#myInput').trigger('focus')
 // })
@@ -124,7 +113,18 @@ $('.nav-tabs a').on('click', function (e) {
 // editor submit
     
 
+// Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBTRkVT7tbugUbV0PGumc4RdGKCZby_DNc",
+    authDomain: "tempproject-9e7ae.firebaseapp.com",
+    databaseURL: "https://tempproject-9e7ae.firebaseio.com",
+    projectId: "tempproject-9e7ae",
+    storageBucket: "tempproject-9e7ae.appspot.com",
+    messagingSenderId: "682367898884"
+  };
+  firebase.initializeApp(config);
 
+  var messagesRef = firebase.database().ref('messages');
     document.getElementById('editorData').onsubmit = (e) => {
         e.preventDefault();
         
@@ -134,6 +134,7 @@ $('.nav-tabs a').on('click', function (e) {
         var recoupment = getInputValue('recoupment');
         var profit = getInputValue('profit');
         var description = getInputValue('description');
+        var broker = getInputValue('broker');
         var city = getInputValue('city');
         var region = getInputValue('region');
         var section = getInputValue('section');
@@ -146,17 +147,17 @@ $('.nav-tabs a').on('click', function (e) {
         var businessAge = getInputValue('businessAge');
         var organizationalAndLegalForm = getInputValue('organizationalAndLegalForm');
 
-        saveMessage(name, price, rate, recoupment, profit, description, city, region, section, middleMonthTurnovers, middleMonthCosts, amountOfWorkers, salary, area, rentPrice, businessAge, organizationalAndLegalForm);
+        saveMessage(name, price, rate, recoupment, profit, description, broker, city, region, section, middleMonthTurnovers, middleMonthCosts, amountOfWorkers, salary, area, rentPrice, businessAge, organizationalAndLegalForm);
         // console.log(name, price, rate, recoupment, profit, description, city, region, section, middleMonthTurnovers, middleMonthCosts, amountOfWorkers, salary, area, rentPrice, businessAge, organizationalAndLegalForm);
-
+        // console.log(name);
     }
     
     function getInputValue(id) {
         return document.getElementById(id).value
     }
+    console.log(messagesRef.push());
 
-
-    function saveMessage(name, price, rate, recoupment, profit, description, city, region, section, middleMonthTurnovers, middleMonthCosts, amountOfWorkers, salary, area, rentPrice, businessAge, organizationalAndLegalForm) {
+    function saveMessage(name, price, rate, recoupment, profit, description, broker, city, region, section, middleMonthTurnovers, middleMonthCosts, amountOfWorkers, salary, area, rentPrice, businessAge, organizationalAndLegalForm) {
         var newMessageRef = messagesRef.push();
         newMessageRef.set({
             name: name,
@@ -165,6 +166,7 @@ $('.nav-tabs a').on('click', function (e) {
             recoupment: recoupment,
             profit: profit,
             description: description,
+            broker: broker,
             city: city,
             region: region,
             section: section,
@@ -178,8 +180,3 @@ $('.nav-tabs a').on('click', function (e) {
             organizationalAndLegalForm: organizationalAndLegalForm
         })
     };
-
-
-
-
-
