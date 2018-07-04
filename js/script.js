@@ -81,27 +81,27 @@
 
 
 // было включено
-// document.querySelector('.firstPageCardsPanelContainer').onmouseover = (e) => {
+document.querySelector('.firstPageCardsPanelContainer').onmouseover = (e) => {
 
 
     
 
-//     if (e.target.className == 'borderCard') {
+    if (e.target.className == 'borderCard') {
     
-//         e.target.parentNode.querySelector('.opacityLayerBackground').style.opacity = 1;
+        e.target.parentNode.querySelector('.opacityLayerBackground').style.opacity = 1;
         
-//     };
+    };
     
 
-// };
+};
 
-// document.querySelector('.firstPageCardsPanelContainer').onmouseout = (e) => {
-//     if (e.target.className == 'borderCard') {
+document.querySelector('.firstPageCardsPanelContainer').onmouseout = (e) => {
+    if (e.target.className == 'borderCard') {
     
-//         e.target.parentNode.querySelector('.opacityLayerBackground').style.opacity = 0;
+        e.target.parentNode.querySelector('.opacityLayerBackground').style.opacity = 0;
         
-//     };
-// };
+    };
+};
 
 $('.nav-tabs a').on('click', function (e) {
   e.preventDefault()
