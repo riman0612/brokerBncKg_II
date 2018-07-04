@@ -162,7 +162,7 @@ $('.nav-tabs a').on('click', function (e) {
         newMessageRef.set({
             name: name,
             price: price,
-            price: price,
+            rate: rate,
             recoupment: recoupment,
             profit: profit,
             description: description,

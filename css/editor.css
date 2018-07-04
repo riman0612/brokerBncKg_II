@@ -712,3 +712,10 @@ body {
 	right: -10px;
 	transform: rotate(45deg);
 }
+#editorData {
+	display: flex;
+	flex-direction: column;
+}
+#editorSubmitButton {
+	align-self: center;
+}
