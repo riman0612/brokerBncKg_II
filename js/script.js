@@ -180,3 +180,5 @@ $('.nav-tabs a').on('click', function (e) {
             organizationalAndLegalForm: organizationalAndLegalForm
         })
     };
+
+    console.log('это сообщение!');
