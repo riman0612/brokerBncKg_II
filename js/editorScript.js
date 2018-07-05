@@ -1,5 +1,4 @@
-// editor submit
-    
+// editor submit    
 
 // Initialize Firebase
   var config = {
@@ -43,7 +42,6 @@
     function getInputValue(id) {
         return document.getElementById(id).value
     }
-    console.log(messagesRef.push());
 
     function saveMessage(name, price, rate, recoupment, profit, description, broker, city, region, section, middleMonthTurnovers, middleMonthCosts, amountOfWorkers, salary, area, rentPrice, businessAge, organizationalAndLegalForm) {
         var newMessageRef = messagesRef.push();
@@ -69,4 +67,6 @@
         })
     };
 
-    console.log('это сообщение!');
+
+    // console.log(messagesRef.push());
+    console.log(firebase.database());
