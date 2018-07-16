@@ -1,3 +1,32 @@
+// Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCNfQ1t5k2bT12hb7RUm5ilXiPC5WOe_bM",
+    authDomain: "page3editor.firebaseapp.com",
+    databaseURL: "https://page3editor.firebaseio.com",
+    projectId: "page3editor",
+    storageBucket: "",
+    messagingSenderId: "622842989948"
+  };
+  firebase.initializeApp(config);
+
+
+// scrolling
+$(document).ready(function() {
+ 
+ 
+   $(".howItWorksButton").click(function() {
+      $("html, body").animate({
+         scrollTop: $($(this).attr("href")).offset().top - 15 + "px"
+      }, {
+         duration: 500,
+         easing: "swing"
+      });
+      return false;
+   });
+ 
+ 
+});
+
 
 // $('#myModal').on('shown.bs.modal', function () {
 //   $('#myInput').trigger('focus')
@@ -182,3 +211,11 @@ $('.nav-tabs a').on('click', function (e) {
   //   };
 
   //   console.log('это сообщение!');
+
+
+  var getEl = el => document.querySelector(el);
+
+  console.log(getEl('.businessDescriptionMainHeader'));
+
+  var db = firebase.database().ref();
+

@@ -68,7 +68,7 @@ ul {
 .aboutUsAndCallOrderWrapper {
 	display: flex;
 	align-items: center;
-	width: 303px;
+	/*width: 303px;*/
 	justify-content: space-between;
 	font-size: .9em;
 }
@@ -78,6 +78,7 @@ ul {
 .aboutUsAndCallOrderWrapper .line {
 	border-right: 2px solid white;
 	height: 24px;
+	margin: 0 60px;
 }
 .callOrder {
 	background: silver;
@@ -94,6 +95,12 @@ ul {
 .callOrder:hover {
 	background: #e7e7e7;
 	text-decoration: none !important;
+}
+.ownCallOrder {
+	margin-left: 275px;
+}
+.study {
+	margin-left: 35px;
 }
 
 .entranceAndRegistrationWrapper {
@@ -205,9 +212,65 @@ ul {
 }
 /*****************************************END of logo and buttons****************************************/
 
+/*****************************************howItWorksAndSearchBar****************************************/
+.howItWorksAndSearchBar {
+	height: 45px;
+	display: flex;
+	justify-content: space-between;
+}
+.howItWorksButton {
+	height: 100%;
+	border-radius: 5px;
+	background: orange;
+	cursor: pointer;
+	margin-left: 68px;
+	border: none;
+	color: white;
+	padding: 0 15px;
+	box-shadow: 0px 7px 13px 0px rgba(209,209,209,1);
+	display: flex;
+	align-items: center;
+	transition: .3s;
+}
+.howItWorksButton:hover {
+	color: white;
+	background: #dd8f00;
+}
+.howItWorksButton:focus {
+	outline: none;
+}
+.searchInputWrapper {
+	height: 100%;
+	display: flex;
+	align-items: center;
+	background: silver;
+	border-radius: 5px;
+	padding: 0 12px;
+	width: 400px;
+	margin-right: 88px;
+}
+.searchInputWrapper input {
+	background: silver;
+	border: none;
+	outline: none;
+	font-size: 16px;
+	flex: 1;
+}
+.searchInputWrapper button {
+	border: none;
+	cursor: pointer;
+	background: white;
+	font-size: 13px;
+	height: 80%;
+	border-radius: 5px;
+	padding: 0 15px;
+	outline: none;
+}
+/*****************************************END of howItWorksAndSearchBar****************************************/
+
 /*****************************************first page cards panel****************************************/
 .firstPageCardsPanelWrapper {
-	background: #6e6e6e;
+	/*background: #6e6e6e;*/
 	padding: 50px 20px;
 }
 .firstPageCardsPanelContainer {
@@ -230,7 +293,8 @@ ul {
 }
 .colNav {
 	height: 40px;
-	background: #ffffffc7;
+	/*background: #ffffffc7;*/
+	background: #d1d0d0;
 	/*border-radius: 5px;*/
 	margin-bottom: 20px;
 	width: 100%;
@@ -247,7 +311,7 @@ ul {
 	color: black;
 }
 .colNav:hover {
-	background: #fffffff2;
+	background: #dfdfdf;
 }
 .colNavVertLine {
 	border: 2px solid black;
@@ -713,6 +777,13 @@ ul {
 	margin-bottom: 0;
 } 
 /*****************************************END of third page about business****************************************/
+
+/*****************************************how it works panel****************************************/
+.howItWorksPanel {
+	background: silver;
+	text-align: center;
+}
+/*****************************************END of how it works panel****************************************/
 
 
 /*****************************************footer****************************************/

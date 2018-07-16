@@ -1,18 +1,20 @@
 // editor submit    
 
 // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyBTRkVT7tbugUbV0PGumc4RdGKCZby_DNc",
-    authDomain: "tempproject-9e7ae.firebaseapp.com",
-    databaseURL: "https://tempproject-9e7ae.firebaseio.com",
-    projectId: "tempproject-9e7ae",
-    storageBucket: "tempproject-9e7ae.appspot.com",
-    messagingSenderId: "682367898884"
-  };
-  firebase.initializeApp(config);
+var config = {
+  apiKey: "AIzaSyCNfQ1t5k2bT12hb7RUm5ilXiPC5WOe_bM",
+  authDomain: "page3editor.firebaseapp.com",
+  databaseURL: "https://page3editor.firebaseio.com",
+  projectId: "page3editor",
+  storageBucket: "",
+  messagingSenderId: "622842989948"
+};
+firebase.initializeApp(config);
 
-  var messagesRef = firebase.database().ref('messages');
-    document.getElementById('editorData').onsubmit = (e) => {
+var messagesRef = firebase.database().ref('messages');
+
+document.getElementById('editorData').onsubmit = (e) => {
+        
         e.preventDefault();
         
         var name = getInputValue('naming');
@@ -67,6 +69,4 @@
         })
     };
 
-
-    // console.log(messagesRef.push());
-    console.log(firebase.database());
+    messagesRef.on('value', snap => console.log(snap.val()));
