@@ -12,7 +12,35 @@ firebase.initializeApp(config);
 
 var getEl = el => document.querySelector(el);
 
-getEl('.businessDescriptionMainHeader');
+function putDataInHTML(el, data) {
+  getEl(el).innerHTML = data;
+};
 
-var db = firebase.database().ref();
+var db = firebase.database().ref('businessData');
+////////////////////////////////////////////////////////
+
+db.once('value', snap => {
+  var data = snap.val()['-LHaki-YYi1JceQBov7N'];
+    ////////////////////////
+    putDataInHTML('.businessDescriptionMainHeader', data.name);
+    putDataInHTML('.priceFinanceHeader', data.price);
+    putDataInHTML('.rateHeader', data.rate);
+    putDataInHTML('.recoupmentSpanHeader', data.recoupment);
+    putDataInHTML('.recoupmentSpan', data.recoupment);
+    putDataInHTML('.profitSpanHeader', data.profit);
+    putDataInHTML('.allBusinessDescription', data.description);
+    putDataInHTML('.mainCity', data.city);
+    putDataInHTML('.mainRegion', data.region);
+    putDataInHTML('.priceFinance', data.price);
+    putDataInHTML('.profitSpan', data.profit);
+    putDataInHTML('.section', data.section);
+    putDataInHTML('.turnover', data.rate);
+    putDataInHTML('.monthCosts', data.middleMonthCosts);
+    putDataInHTML('.amountOfWorkers', data.amountOfWorkers);
+    putDataInHTML('.fond', data.salary);
+    putDataInHTML('.spaceOfArea', data.area);
+    putDataInHTML('.priceOfRent', data.rentPrice);
+    putDataInHTML('.ageOfBussines', data.businessAge);
+    putDataInHTML('.ip', data.organizationalAndLegalForm);
+});
 

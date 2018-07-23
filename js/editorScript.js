@@ -11,7 +11,6 @@ var config = {
 };
 firebase.initializeApp(config);
 
-var messagesRef = firebase.database().ref('messages');
 
 document.getElementById('editorData').onsubmit = (e) => {
         
@@ -45,6 +44,8 @@ document.getElementById('editorData').onsubmit = (e) => {
         return document.getElementById(id).value
     }
 
+    var messagesRef = firebase.database().ref('businessData');
+
     function saveMessage(name, price, rate, recoupment, profit, description, broker, city, region, section, middleMonthTurnovers, middleMonthCosts, amountOfWorkers, salary, area, rentPrice, businessAge, organizationalAndLegalForm) {
         var newMessageRef = messagesRef.push();
         newMessageRef.set({
@@ -65,7 +66,8 @@ document.getElementById('editorData').onsubmit = (e) => {
             area: area,
             rentPrice: rentPrice,
             businessAge: businessAge,
-            organizationalAndLegalForm: organizationalAndLegalForm
+            organizationalAndLegalForm: organizationalAndLegalForm,
+            thisBusinessDataKey: newMessageRef.key
         })
     };
 
