@@ -38,6 +38,7 @@ document.getElementById('editorData').onsubmit = (e) => {
         saveMessage(name, price, rate, recoupment, profit, description, broker, city, region, section, middleMonthTurnovers, middleMonthCosts, amountOfWorkers, salary, area, rentPrice, businessAge, organizationalAndLegalForm);
         // console.log(name, price, rate, recoupment, profit, description, city, region, section, middleMonthTurnovers, middleMonthCosts, amountOfWorkers, salary, area, rentPrice, businessAge, organizationalAndLegalForm);
         // console.log(name);
+        
     }
     
     function getInputValue(id) {

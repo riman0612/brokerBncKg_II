@@ -1,591 +1,550 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<title>Главная_II</title>
-	<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="slick/slick.css"/>
-	<link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
-	<link rel="stylesheet" href="css/hamburgers.css">
-	<link rel="stylesheet" href="css/bootstrap.css">
-	<link rel="stylesheet" href="css/main.css">
-	<link rel="stylesheet" href="css/media.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Главная_II</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/media.css">
+    <link rel="stylesheet" href="css/fonts.css">
 </head>
+
 <body>
-	
-	<!-- модальное окно на Вход и на Регистрацию (2 в 1) -->
-	<div class="modal fade" id="registration2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-		<div class="modal-dialog modal-dialog-centered" role="document">
-			<div class="modal-content noBackground">
-				<!-- <div class="modal-body"> -->
-					<!-- <hr> -->
-					<div class="modalWrapper">
-						<ul class="nav nav-tabs">
-							<li class="nav-item">
-								<a class="nav-link active entrance2" href="#home">Вход</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link registration" href="#profile">Регистрация</a>
-							</li>
-						</ul>
-						<div class="tab-content">
-							<!-- <div class="tab-pane active entrance" id="home">Вкладка вход</div> -->
-							<div role="tabpanel" class="tab-pane  borderWindow active" id="home">
-								<form class="entranceAndRegistrationform">
-									<div class="row justify-content-center mb-4 mt-3">
-										<input type="text" class="form-control col-8" id="recipient-name" placeholder="Email">
-									</div>
-									<div class="row justify-content-center mb-4">
-										<input type="text" class="form-control col-8" id="recipient-name" placeholder="Пароль">
-									</div>
-									<button type="submit" class="btn btn-success">Вход</button>	
-								</form>
-							</div>
-							
-							<div role="tabpanel" class="tab-pane  borderWindow " id="profile">
-								<form class="entranceAndRegistrationform">
-									<div class="row">
-										<div class="form-group col-6">
-											<label for="recipient-name" class="col-form-label">Имя:</label>
-											<input type="text" class="form-control" id="recipient-name">
-										</div>
-										<div class="form-group col-6">
-											<label for="recipient-name" class="col-form-label">Фамилия:</label>
-											<input type="text" class="form-control" id="recipient-name">
-										</div>
-									</div>
-									<div class="form-group">
-										<label for="recipient-name" class="col-form-label">Email адресс:</label>
-										<input type="text" class="form-control" id="recipient-name">
-									</div>
-									<div class="form-group mb-4">
-										<label for="recipient-name" class="col-form-label">Пароль:</label>
-										<input type="text" class="form-control" id="recipient-name">
-									</div>
-									<button type="submit" class="btn btn-success">Регистрация</button>	
-								</form>
-							</div>
-						</div>
-					</div>
-
-					
-				</div>
-			</div>
-		</div>
-
-	<!-- модальное окно на Вход -->
-	<div class="modal fade" id="entrance" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-		<div class="modal-dialog modal-dialog-centered" role="document">
-			<div class="modal-content">
-				<div class="modal-header border-0">
-					<h5 class="modal-title" id="exampleModalLongTitle">Вход</h5>
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-					</button>
-				</div>
-				<div class="modal-body">
-					<div class="row justify-content-center mb-3">
-						<input type="text" class="form-control col-8" id="recipient-name" placeholder="Email">
-					</div>
-					<div class="row justify-content-center">
-						<input type="text" class="form-control col-8" id="recipient-name" placeholder="Пароль">
-					</div>
-				</div>
-				<div class="modal-footer justify-content-center border-0">
-					<button type="button" class="btn btn-success">Вход</button>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<!-- модальное окно на Регистрацию -->
-	<div class="modal fade" id="registration" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-		<div class="modal-dialog modal-dialog-centered" role="document">
-			<div class="modal-content">
-				<div class="modal-header border-0">
-					<h5 class="modal-title"  id="exampleModalLongTitle">Регистрация</h5>
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-					</button>
-				</div>
-				<div class="modal-body">
-					<div class="row">
-						<div class="form-group col-6">
-							<label for="recipient-name" class="col-form-label">Имя:</label>
-							<input type="text" class="form-control" id="recipient-name">
-						</div>
-						<div class="form-group col-6">
-							<label for="recipient-name" class="col-form-label">Фамилия:</label>
-							<input type="text" class="form-control" id="recipient-name">
-						</div>
-					</div>
-					<div class="form-group">
-						<label for="recipient-name" class="col-form-label">Email адресс:</label>
-						<input type="text" class="form-control" id="recipient-name">
-					</div>
-					<div class="form-group">
-						<label for="recipient-name" class="col-form-label">Пароль:</label>
-						<input type="text" class="form-control" id="recipient-name">
-					</div>
-				</div>
-				<div class="modal-footer justify-content-center border-0">
-					<button type="button" class="btn btn-success">Регистрация</button>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<!-- модальное окно на Заказ звонка -->
-	<div class="modal fade" id="callOrder" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-		<div class="modal-dialog modal-dialog-centered" role="document">
-			<div class="modal-content">
-				<div class="modal-header border-0">
-					<h5 class="modal-title" id="exampleModalLongTitle">Заказ звонка</h5>
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-					</button>
-				</div>
-				<div class="modal-body">
-					<div class="row justify-content-center">
-						<input type="text" class="form-control col-8" id="recipient-name" placeholder="Ваш номер телефона">
-					</div>
-				</div>
-				<div class="modal-footer justify-content-center border-0">
-					<button type="button" class="btn btn-success">Заказать</button>
-				</div>
-			</div>
-		</div>
-	</div>
-
-<!-- модальные окна 4 кнопки-->
-	<!-- модальное окно на "продать" -->
-	<div class="modal fade" id="justSell" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-		<div class="modal-dialog modal-dialog-centered" role="document">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title" id="exampleModalLongTitle">Продать бизнес</h5>
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-					</button>
-				</div>
-				<form>
-					<div class="modal-body">
-						<div class="row justify-content-center mb-3">
-							<input required type="text" class="form-control col-8" id="recipient-name" placeholder="Имя">
-						</div>
-						<div class="row justify-content-center mb-3">
-							<input required type="text" class="form-control col-8" id="recipient-name" placeholder="Ваш номер телефона">
-						</div>
-						<div class="row justify-content-center mb-4">
-							<input required type="text" class="form-control col-8" id="recipient-name" placeholder="E-mail">
-						</div>
-						<div class="row justify-content-center">
-							<label for="">
-								<input type="checkbox">
-								Согласен на обработку <a href="#">персональных данных</a>
-							</label>
-						</div>
-					</div>
-					<div class="modal-footer justify-content-center border-0 pt-0">
-						<a href="#"><button type="submit" class="btn btn-success">Отправить</button></a>
-					</div>
-				</form>
-			</div>
-		</div>
-	</div>
-	
-	<!-- модальное окно на "купить" -->
-	<div class="modal fade" id="justBuy" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-		<div class="modal-dialog modal-dialog-centered" role="document">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title" id="exampleModalLongTitle">Купить бизнес</h5>
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-					</button>
-				</div>
-				<form>
-					<div class="modal-body">
-						<div class="row justify-content-center mb-3">
-							<input required type="text" class="form-control col-8" id="recipient-name" placeholder="Имя">
-						</div>
-						<div class="row justify-content-center mb-3">
-							<input required type="text" class="form-control col-8" id="recipient-name" placeholder="Ваш номер телефона">
-						</div>
-						<div class="row justify-content-center mb-4">
-							<input required type="text" class="form-control col-8" id="recipient-name" placeholder="E-mail">
-						</div>
-						<div class="row justify-content-center">
-							<label for="">
-								<input type="checkbox">
-								Согласен на обработку <a href="#">персональных данных</a>
-							</label>
-						</div>
-					</div>
-					<div class="modal-footer justify-content-center border-0 pt-0">
-						<a href="#"><button type="submit" class="btn btn-success">Отправить</button></a>
-					</div>
-				</form>
-			</div>
-		</div>
-	</div>
-
-	<!-- модальное окно на "обмен" -->
-	<div class="modal fade" id="justExchange" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-		<div class="modal-dialog modal-dialog-centered" role="document">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title" id="exampleModalLongTitle">Обменять бизнес</h5>
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-					</button>
-				</div>
-				<form>
-					<div class="modal-body">
-						<div class="row justify-content-center mb-3">
-							<input required type="text" class="form-control col-8" id="recipient-name" placeholder="Имя">
-						</div>
-						<div class="row justify-content-center mb-3">
-							<input required type="text" class="form-control col-8" id="recipient-name" placeholder="Ваш номер телефона">
-						</div>
-						<div class="row justify-content-center mb-4">
-							<input required type="text" class="form-control col-8" id="recipient-name" placeholder="E-mail">
-						</div>
-						<div class="row justify-content-center">
-							<label for="">
-								<input type="checkbox">
-								Согласен на обработку <a href="#">персональных данных</a>
-							</label>
-						</div>
-					</div>
-					<div class="modal-footer justify-content-center border-0 pt-0">
-						<a href="#"><button type="submit" class="btn btn-success">Отправить</button></a>
-					</div>
-				</form>
-			</div>
-		</div>
-	</div>
-	
-	<!-- модальное окно на "ищу инвестиции" -->
-	<div class="modal fade" id="searсhingForInvestments" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-		<div class="modal-dialog modal-dialog-centered" role="document">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title" id="exampleModalLongTitle">Ищу инвестиции</h5>
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-					</button>
-				</div>
-				<form>
-					<div class="modal-body">
-						<div class="row justify-content-center mb-3">
-							<input required type="text" class="form-control col-8" id="recipient-name" placeholder="Имя">
-						</div>
-						<div class="row justify-content-center mb-3">
-							<input required type="text" class="form-control col-8" id="recipient-name" placeholder="Ваш номер телефона">
-						</div>
-						<div class="row justify-content-center mb-4">
-							<input required type="text" class="form-control col-8" id="recipient-name" placeholder="E-mail">
-						</div>
-						<div class="row justify-content-center">
-							<label for="">
-								<input type="checkbox">
-								Согласен на обработку <a href="#">персональных данных</a>
-							</label>
-						</div>
-					</div>
-					<div class="modal-footer justify-content-center border-0 pt-0">
-						<a href="#"><button type="submit" class="btn btn-success">Отправить</button></a>
-					</div>
-				</form>
-			</div>
-		</div>
-	</div>
-
-	<!-- desktop navbar	 -->
-	<div class="desktopNavbarWrapper">
-		<div class="container desktopNavbarContainer">
-			<div class="aboutUsAndCallOrderWrapper">
-				<a href="http://www.bnc.kg/" class="aboutUs">О нас</a>
-				<div class="line"></div>
-				<a data-toggle="modal" data-target="#callOrder" class="callOrder service">Услуги</a>
-				<a data-toggle="modal" data-target="#callOrder" class="callOrder study">обучение</a>
-				<a data-toggle="modal" data-target="#callOrder" class="callOrder ownCallOrder">Заказ звонка</a>
-			</div>
-
-			<!-- <div class="entranceAndRegistrationWrapper">
-				<a data-toggle="modal" data-target="#registration2"><span>вход</span></a>
-				<div class="line"></div>
-				<a data-toggle="modal" data-target="#registration2"><span>регистрация</span></a>
-			</div> -->
-			<a data-toggle="modal" data-target="#registration2">
-				<div class="entranceImg">
-					<span>вход</span><i class="fas fa-sign-in-alt"></i>
-				</div>
-			</a>
-		</div>
-	</div>
-
-	<!-- mobile navbar	 -->
-	<div class="mobileNavbarWrapper">
-		Это mobile navbar
-	</div>
-	<div class="mobileNavbarSpace"></div>
-	
-	<!-- logo and buttons   -->
-	<div class="logoAndButtonsWrapper">
-		<div class="container logoAndButtonsContainer">
-			<a href="#">
+    <!-- модальное окно на Вход и на Регистрацию (2 в 1) -->
+    <div class="modal fade" id="registration2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content noBackground">
+                <div class="modalWrapper">
+                    <ul class="nav nav-tabs">
+                        <li class="nav-item">
+                            <a class="nav-link active entrance2" href="#home">Вход</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link registration" href="#profile">Регистрация</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane  borderWindow active" id="home">
+                            <form class="entranceAndRegistrationform">
+                                <div class="row justify-content-center mb-4 mt-3">
+                                    <input type="text" class="form-control col-8" id="recipient-name" placeholder="Email">
+                                </div>
+                                <div class="row justify-content-center mb-4">
+                                    <input type="text" class="form-control col-8" placeholder="Пароль">
+                                </div>
+                                <button type="submit" class="btn btn-success">Вход</button>
+                            </form>
+                        </div>
+                        <div role="tabpanel" class="tab-pane  borderWindow " id="profile">
+                            <form class="entranceAndRegistrationform">
+                                <div class="row">
+                                    <div class="form-group col-6">
+                                        <label for="recipient-name" class="col-form-label">Имя:</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    <div class="form-group col-6">
+                                        <label for="recipient-name" class="col-form-label">Фамилия:</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="recipient-name" class="col-form-label">Email адресс:</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="form-group mb-4">
+                                    <label for="recipient-name" class="col-form-label">Пароль:</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                                <button type="submit" class="btn btn-success">Регистрация</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- модальное окно на Вход -->
+    <div class="modal fade" id="entrance" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Вход</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row justify-content-center mb-3">
+                        <input type="text" class="form-control col-8" placeholder="Email">
+                    </div>
+                    <div class="row justify-content-center">
+                        <input type="text" class="form-control col-8" placeholder="Пароль">
+                    </div>
+                </div>
+                <div class="modal-footer justify-content-center border-0">
+                    <button type="button" class="btn btn-success">Вход</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- модальное окно на Регистрацию -->
+    <div class="modal fade" id="registration" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title">Регистрация</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="form-group col-6">
+                            <label for="recipient-name" class="col-form-label">Имя:</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="form-group col-6">
+                            <label for="recipient-name" class="col-form-label">Фамилия:</label>
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="recipient-name" class="col-form-label">Email адресс:</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="recipient-name" class="col-form-label">Пароль:</label>
+                        <input type="text" class="form-control">
+                    </div>
+                </div>
+                <div class="modal-footer justify-content-center border-0">
+                    <button type="button" class="btn btn-success">Регистрация</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- модальное окно на Заказ звонка -->
+    <div class="modal fade" id="callOrder" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title">Заказ звонка</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row justify-content-center">
+                        <input type="text" class="form-control col-8" placeholder="Ваш номер телефона">
+                    </div>
+                </div>
+                <div class="modal-footer justify-content-center border-0">
+                    <button type="button" class="btn btn-success">Заказать</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- модальные окна 4 кнопки-->
+    <!-- модальное окно на "продать" -->
+    <div class="modal fade" id="justSell" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Продать бизнес</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <form>
+                    <div class="modal-body">
+                        <div class="row justify-content-center mb-3">
+                            <input required type="text" class="form-control col-8" placeholder="Имя">
+                        </div>
+                        <div class="row justify-content-center mb-3">
+                            <input required type="text" class="form-control col-8" placeholder="Ваш номер телефона">
+                        </div>
+                        <div class="row justify-content-center mb-4">
+                            <input required type="text" class="form-control col-8" placeholder="E-mail">
+                        </div>
+                        <div class="row justify-content-center">
+                            <label for="">
+                                <input type="checkbox"> Согласен на обработку <a href="#">персональных данных</a>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="modal-footer justify-content-center border-0 pt-0">
+                        <a href="#">
+                            <button type="submit" class="btn btn-success">Отправить</button>
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- модальное окно на "купить" -->
+    <div class="modal fade" id="justBuy" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Купить бизнес</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <form>
+                    <div class="modal-body">
+                        <div class="row justify-content-center mb-3">
+                            <input required type="text" class="form-control col-8" placeholder="Имя">
+                        </div>
+                        <div class="row justify-content-center mb-3">
+                            <input required type="text" class="form-control col-8" placeholder="Ваш номер телефона">
+                        </div>
+                        <div class="row justify-content-center mb-4">
+                            <input required type="text" class="form-control col-8" placeholder="E-mail">
+                        </div>
+                        <div class="row justify-content-center">
+                            <label for="">
+                                <input type="checkbox"> Согласен на обработку <a href="#">персональных данных</a>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="modal-footer justify-content-center border-0 pt-0">
+                        <a href="#">
+                            <button type="submit" class="btn btn-success">Отправить</button>
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- модальное окно на "обмен" -->
+    <div class="modal fade" id="justExchange" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Обменять бизнес</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <form>
+                    <div class="modal-body">
+                        <div class="row justify-content-center mb-3">
+                            <input required type="text" class="form-control col-8" placeholder="Имя">
+                        </div>
+                        <div class="row justify-content-center mb-3">
+                            <input required type="text" class="form-control col-8" placeholder="Ваш номер телефона">
+                        </div>
+                        <div class="row justify-content-center mb-4">
+                            <input required type="text" class="form-control col-8" placeholder="E-mail">
+                        </div>
+                        <div class="row justify-content-center">
+                            <label for="">
+                                <input type="checkbox"> Согласен на обработку <a href="#">персональных данных</a>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="modal-footer justify-content-center border-0 pt-0">
+                        <a href="#">
+                            <button type="submit" class="btn btn-success">Отправить</button>
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- модальное окно на "ищу инвестиции" -->
+    <div class="modal fade" id="searсhingForInvestments" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Ищу инвестиции</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <form>
+                    <div class="modal-body">
+                        <div class="row justify-content-center mb-3">
+                            <input required type="text" class="form-control col-8" placeholder="Имя">
+                        </div>
+                        <div class="row justify-content-center mb-3">
+                            <input required type="text" class="form-control col-8" placeholder="Ваш номер телефона">
+                        </div>
+                        <div class="row justify-content-center mb-4">
+                            <input required type="text" class="form-control col-8" placeholder="E-mail">
+                        </div>
+                        <div class="row justify-content-center">
+                            <label for="">
+                                <input type="checkbox"> Согласен на обработку <a href="#">персональных данных</a>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="modal-footer justify-content-center border-0 pt-0">
+                        <a href="#">
+                            <button type="submit" class="btn btn-success">Отправить</button>
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- desktop navbar	 -->
+    <div class="desktopNavbarWrapper">
+        <div class="container desktopNavbarContainer">
+            <div class="aboutUsAndCallOrderWrapper">
+                <a href="http://www.bnc.kg/" class="aboutUs">О нас</a>
+                <div class="line"></div>
+                <a data-toggle="modal" data-target="#callOrder" class="callOrder service">Услуги</a>
+                <a data-toggle="modal" data-target="#callOrder" class="callOrder study">обучение</a>
+                <a data-toggle="modal" data-target="#callOrder" class="callOrder ownCallOrder">Заказ звонка</a>
+            </div>
+            <a data-toggle="modal" data-target="#registration2">
+                <div class="entranceImg">
+                    <span>вход</span><i class="fas fa-sign-in-alt"></i>
+                </div>
+            </a>
+        </div>
+    </div>
+    <!-- mobile navbar	 -->
+    <div class="mobileNavbarWrapper">
+        Это mobile navbar
+    </div>
+    <div class="mobileNavbarSpace"></div>
+    <!-- logo and buttons   -->
+    <div class="logoAndButtonsWrapper">
+        <div class="container logoAndButtonsContainer">
+            <a href="#">
 				<img src="img/logo.jpg">
 			</a>
-			<div class="fourBtnWrapper">
-				<a data-toggle="modal" data-target="#justSell">
-					<button class="btn marginBtn btn-danger btnSell">ПРОДАТЬ</button>
-				</a>
-				<a data-toggle="modal" data-target="#justBuy">
-					<button class="btn marginBtn btn-success">КУПИТЬ</button>
-				</a>
-				<a data-toggle="modal" data-target="#justExchange">
-					<button class="btn btn-warning">ОБМЕН</button>
-				</a>
-				<a data-toggle="modal" data-target="#searсhingForInvestments">
-					<button class="btn btn-danger">ИЩУ ИНВЕСТИЦИИ</button>
-				</a>
-			</div>
-		</div>
-	</div>
-	
-
-	<div>
-		<div class="howItWorksAndSearchBar container">
-			<a href="#howItWorksPanel" class="howItWorksButton">Как это работает</a>
-			<div class="searchInputWrapper">
-				<input type="text"><button>ПОИСК</button>
-			</div>
-		</div>
-	</div>
-	<!-- first page cards panel  -->
-	<div class="firstPageCardsPanelWrapper">
-		<div class="container firstPageCardsPanelContainer">
-			<div class="bigCol firstBigCol">
-				<div class="smCol marginBetweenSmCol">
-					<a href="ready_business.html" class="centerButton">
-						<div class="colNav firstColNav">Готовый бизнес
-							<div class="colNavVertLine hiddenColNavNCardVertLine596"></div>
-						</div>
-					</a>
-					<div class="colCard">
-						<a href="3page.html">
-							<div class="cardsWrapper">
-								<div class="borderCard"></div>
-								<div class="opacityLayerBackground">
-									<div class="opacityLayerBackgroundText">
-										Lorem ipsum dolor sit amet
-									</div>
-								</div>
-								<div class="colCardItem"></div>
-							</div>
-						</a>
-						<a href="3page.html">
-							
-							<div class="cardsWrapper">
-								<div class="borderCard"></div>	
-								<div class="opacityLayerBackground">
-									<div class="opacityLayerBackgroundText">
-										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo voluptatibus numquam reiciendis odio molestiae.
-									</div>
-								</div>
-								<div class="colCardItem"></div>
-							</div>
-							
-						</a>
-						<a href="3page.html">
-							
-							<div class="cardsWrapper">
-								<div class="borderCard"></div>	
-								<div class="opacityLayerBackground">
-									<div class="opacityLayerBackgroundText">
-										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo voluptatibus numquam reiciendis odio molestiae.
-									</div>
-								</div>
-								<div class="colCardItem"></div>
-							</div>
-							
-						</a>
-						<div class="colCardVertLine hiddenColNavNCardVertLine596"></div>
-					</div>
-					<a href="ready_business.html" class="centerButton">
-						<button class="btn btn-sm btn-warning" style="width: min-content;">
-							Подробнее ...
-						</button>
-					</a>
-				</div>
-				<div class="smCol marginBetweenSmCol">
-					<a href="business-acitve.html" class="centerButton">
-						<div class="colNav secondColNav">Бизнес - Актив
-							<div class="colNavVertLine hiddenColNavNCardVertLine992"></div>
-						</div>
-					</a>
-					<div class="colCard">
-						<a href="3page.html">
-							<div class="cardsWrapper">
-								<div class="borderCard"></div>
-								<div class="opacityLayerBackground">
-									<div class="opacityLayerBackgroundText">
-										Lorem ipsum dolor sit amet
-									</div>
-								</div>
-								<div class="colCardItem"></div>
-							</div>
-						</a>
-						<a href="3page.html">
-							
-							<div class="cardsWrapper">
-								<div class="borderCard"></div>	
-								<div class="opacityLayerBackground">
-									<div class="opacityLayerBackgroundText">
-										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo voluptatibus numquam reiciendis odio molestiae.
-									</div>
-								</div>
-								<div class="colCardItem"></div>
-							</div>
-							
-						</a>
-						<a href="3page.html">
-							
-							<div class="cardsWrapper">
-								<div class="borderCard"></div>	
-								<div class="opacityLayerBackground">
-									<div class="opacityLayerBackgroundText">
-										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo voluptatibus numquam reiciendis odio molestiae.
-									</div>
-								</div>
-								<div class="colCardItem"></div>
-							</div>
-							
-						</a>
-						<div class="colCardVertLine hiddenColNavNCardVertLine992"></div>
-					</div>
-					<a href="business-acitve.html" class="centerButton">
-						<button class="btn btn-sm btn-warning" style="width: min-content;">
-							Подробнее ...
-						</button>
-					</a>
-				</div>
-			</div>
-			<div class="bigCol noMarginBottom">
-				<div class="smCol marginBetweenSmCol">
-					<a href="barter.html" class="centerButton">
-						<div class="colNav thirdColNav">Бартер
-							<div class="colNavVertLine hiddenColNavNCardVertLine596"></div>
-						</div>
-					</a>
-					<div class="colCard">
-						<a href="3page.html">
-							<div class="cardsWrapper">
-								<div class="borderCard"></div>	
-								<div class="opacityLayerBackground">
-									<div class="opacityLayerBackgroundText">
-										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo voluptatibus numquam reiciendis odio molestiae.
-									</div>
-								</div>
-								<div class="colCardItem"></div>
-							</div>
-						</a>
-						<a href="3page.html">
-							
-							<div class="cardsWrapper">
-								<div class="borderCard"></div>	
-								<div class="opacityLayerBackground">
-									<div class="opacityLayerBackgroundText">
-										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo voluptatibus numquam reiciendis odio molestiae.
-									</div>
-								</div>
-								<div class="colCardItem"></div>
-							</div>
-							
-						</a>
-						<a href="3page.html">
-							
-							<div class="cardsWrapper">
-								<div class="borderCard"></div>	
-								<div class="opacityLayerBackground">
-									<div class="opacityLayerBackgroundText">
-										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo voluptatibus numquam reiciendis odio molestiae.
-									</div>
-								</div>
-								<div class="colCardItem"></div>
-							</div>
-							
-						</a>
-						<div class="colCardVertLine hiddenColNavNCardVertLine596"></div>
-					</div>
-					<a href="barter.html" class="centerButton">
-						<button class="btn btn-sm btn-warning" style="width: min-content;">
-							Подробнее ...
-						</button>
-					</a>
-				</div>
-				<div class="smCol lastSmCol">
-					<a href="commercial_estate.html" class="centerButton">
-						<div class="colNav forthColNav">Коммерческая недвижимость</div>
-					</a>
-					<div class="colCard">
-						<a href="3page.html">
-							<div class="cardsWrapper">
-								<div class="borderCard"></div>	
-								<div class="opacityLayerBackground">
-									<div class="opacityLayerBackgroundText">
-										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo voluptatibus numquam reiciendis odio molestiae.
-									</div>
-								</div>
-								<div class="colCardItem"></div>
-							</div>
-						</a>
-						<a href="3page.html">
-							
-							<div class="cardsWrapper">
-								<div class="borderCard"></div>	
-								<div class="opacityLayerBackground">
-									<div class="opacityLayerBackgroundText">
-										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo voluptatibus numquam reiciendis odio molestiae.
-									</div>
-								</div>
-								<div class="colCardItem"></div>
-							</div>
-							
-						</a>
-						<a href="3page.html">
-							
-							<div class="cardsWrapper">
-								<div class="borderCard"></div>	
-								<div class="opacityLayerBackground">
-									<div class="opacityLayerBackgroundText">
-										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo voluptatibus numquam reiciendis odio molestiae.
-									</div>
-								</div>
-								<div class="colCardItem"></div>
-							</div>
-							
-						</a>
-					</div>
-					<a href="commercial_estate.html" class="centerButton">
-						<button class="btn btn-sm btn-warning" style="width: min-content;">
-							Подробнее ...
-						</button>
-					</a>
-				</div>
-			</div>
-
-		</div>
-	</div>
-
-	<div>
-		<pre class="container howItWorksPanel" id="howItWorksPanel">
+            <div class="fourBtnWrapper">
+                <a data-toggle="modal" data-target="#justSell">
+                    <button class="btn marginBtn btn-danger btnSell">ПРОДАТЬ</button>
+                </a>
+                <a data-toggle="modal" data-target="#justBuy">
+                    <button class="btn marginBtn btn-success">КУПИТЬ</button>
+                </a>
+                <a data-toggle="modal" data-target="#justExchange">
+                    <button class="btn btn-warning">ОБМЕН</button>
+                </a>
+                <a data-toggle="modal" data-target="#searсhingForInvestments">
+                    <button class="btn btn-danger">ИЩУ ИНВЕСТИЦИИ</button>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="howItWorksAndSearchBar container">
+            <a href="#howItWorksPanel" class="howItWorksButton">Как это работает</a>
+            <div class="searchInputWrapper">
+                <input type="text">
+                <button>ПОИСК</button>
+            </div>
+        </div>
+    </div>
+    <!-- first page cards panel  -->
+    <div class="firstPageCardsPanelWrapper">
+        <div class="container firstPageCardsPanelContainer">
+            <div class="bigCol firstBigCol">
+                <div class="smCol marginBetweenSmCol">
+                    <a href="ready_business.html" class="centerButton">
+                        <div class="colNav firstColNav">Готовый бизнес
+                            <div class="colNavVertLine hiddenColNavNCardVertLine596"></div>
+                        </div>
+                    </a>
+                    <div class="colCard">
+                        <a href="3page.html">
+                            <div class="cardsWrapper">
+                                <div class="borderCard"></div>
+                                <div class="opacityLayerBackground">
+                                    <div class="opacityLayerBackgroundText">
+                                        Lorem ipsum dolor sit amet
+                                    </div>
+                                </div>
+                                <div class="colCardItem"></div>
+                            </div>
+                        </a>
+                        <a href="3page.html">
+                            <div class="cardsWrapper">
+                                <div class="borderCard"></div>
+                                <div class="opacityLayerBackground">
+                                    <div class="opacityLayerBackgroundText">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo voluptatibus numquam reiciendis odio molestiae.
+                                    </div>
+                                </div>
+                                <div class="colCardItem"></div>
+                            </div>
+                        </a>
+                        <a href="3page.html">
+                            <div class="cardsWrapper">
+                                <div class="borderCard"></div>
+                                <div class="opacityLayerBackground">
+                                    <div class="opacityLayerBackgroundText">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo voluptatibus numquam reiciendis odio molestiae.
+                                    </div>
+                                </div>
+                                <div class="colCardItem"></div>
+                            </div>
+                        </a>
+                        <div class="colCardVertLine hiddenColNavNCardVertLine596"></div>
+                    </div>
+                    <a href="ready_business.html" class="centerButton">
+                        <button class="btn btn-sm btn-warning" style="width: min-content;">
+                            Подробнее ...
+                        </button>
+                    </a>
+                </div>
+                <div class="smCol marginBetweenSmCol">
+                    <a href="business-acitve.html" class="centerButton">
+                        <div class="colNav secondColNav">Бизнес - Актив
+                            <div class="colNavVertLine hiddenColNavNCardVertLine992"></div>
+                        </div>
+                    </a>
+                    <div class="colCard">
+                        <a href="3page.html">
+                            <div class="cardsWrapper">
+                                <div class="borderCard"></div>
+                                <div class="opacityLayerBackground">
+                                    <div class="opacityLayerBackgroundText">
+                                        Lorem ipsum dolor sit amet
+                                    </div>
+                                </div>
+                                <div class="colCardItem"></div>
+                            </div>
+                        </a>
+                        <a href="3page.html">
+                            <div class="cardsWrapper">
+                                <div class="borderCard"></div>
+                                <div class="opacityLayerBackground">
+                                    <div class="opacityLayerBackgroundText">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo voluptatibus numquam reiciendis odio molestiae.
+                                    </div>
+                                </div>
+                                <div class="colCardItem"></div>
+                            </div>
+                        </a>
+                        <a href="3page.html">
+                            <div class="cardsWrapper">
+                                <div class="borderCard"></div>
+                                <div class="opacityLayerBackground">
+                                    <div class="opacityLayerBackgroundText">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo voluptatibus numquam reiciendis odio molestiae.
+                                    </div>
+                                </div>
+                                <div class="colCardItem"></div>
+                            </div>
+                        </a>
+                        <div class="colCardVertLine hiddenColNavNCardVertLine992"></div>
+                    </div>
+                    <a href="business-acitve.html" class="centerButton">
+                        <button class="btn btn-sm btn-warning" style="width: min-content;">
+                            Подробнее ...
+                        </button>
+                    </a>
+                </div>
+            </div>
+            <div class="bigCol noMarginBottom">
+                <div class="smCol marginBetweenSmCol">
+                    <a href="barter.html" class="centerButton">
+                        <div class="colNav thirdColNav">Бартер
+                            <div class="colNavVertLine hiddenColNavNCardVertLine596"></div>
+                        </div>
+                    </a>
+                    <div class="colCard">
+                        <a href="3page.html">
+                            <div class="cardsWrapper">
+                                <div class="borderCard"></div>
+                                <div class="opacityLayerBackground">
+                                    <div class="opacityLayerBackgroundText">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo voluptatibus numquam reiciendis odio molestiae.
+                                    </div>
+                                </div>
+                                <div class="colCardItem"></div>
+                            </div>
+                        </a>
+                        <a href="3page.html">
+                            <div class="cardsWrapper">
+                                <div class="borderCard"></div>
+                                <div class="opacityLayerBackground">
+                                    <div class="opacityLayerBackgroundText">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo voluptatibus numquam reiciendis odio molestiae.
+                                    </div>
+                                </div>
+                                <div class="colCardItem"></div>
+                            </div>
+                        </a>
+                        <a href="3page.html">
+                            <div class="cardsWrapper">
+                                <div class="borderCard"></div>
+                                <div class="opacityLayerBackground">
+                                    <div class="opacityLayerBackgroundText">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo voluptatibus numquam reiciendis odio molestiae.
+                                    </div>
+                                </div>
+                                <div class="colCardItem"></div>
+                            </div>
+                        </a>
+                        <div class="colCardVertLine hiddenColNavNCardVertLine596"></div>
+                    </div>
+                    <a href="barter.html" class="centerButton">
+                        <button class="btn btn-sm btn-warning" style="width: min-content;">
+                            Подробнее ...
+                        </button>
+                    </a>
+                </div>
+                <div class="smCol lastSmCol">
+                    <a href="commercial_estate.html" class="centerButton">
+                        <div class="colNav forthColNav">Коммерческая недвижимость</div>
+                    </a>
+                    <div class="colCard">
+                        <a href="3page.html">
+                            <div class="cardsWrapper">
+                                <div class="borderCard"></div>
+                                <div class="opacityLayerBackground">
+                                    <div class="opacityLayerBackgroundText">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo voluptatibus numquam reiciendis odio molestiae.
+                                    </div>
+                                </div>
+                                <div class="colCardItem"></div>
+                            </div>
+                        </a>
+                        <a href="3page.html">
+                            <div class="cardsWrapper">
+                                <div class="borderCard"></div>
+                                <div class="opacityLayerBackground">
+                                    <div class="opacityLayerBackgroundText">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo voluptatibus numquam reiciendis odio molestiae.
+                                    </div>
+                                </div>
+                                <div class="colCardItem"></div>
+                            </div>
+                        </a>
+                        <a href="3page.html">
+                            <div class="cardsWrapper">
+                                <div class="borderCard"></div>
+                                <div class="opacityLayerBackground">
+                                    <div class="opacityLayerBackgroundText">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo voluptatibus numquam reiciendis odio molestiae.
+                                    </div>
+                                </div>
+                                <div class="colCardItem"></div>
+                            </div>
+                        </a>
+                    </div>
+                    <a href="commercial_estate.html" class="centerButton">
+                        <button class="btn btn-sm btn-warning" style="width: min-content;">
+                            Подробнее ...
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <pre class="container howItWorksPanel" id="howItWorksPanel">
 			Как это работает
 			Здесь размещается вводная (общая) информация о 
 			четырех направлениях проекта пайда.кг:
@@ -598,30 +557,20 @@
 
 			4. Коммерческая недвижимость По каждому направлению предусмотрена ссылка на страницу соответствующего направления.
 		</pre>
-	</div>
-
-
-	
-	<!-- footer -->
-	<div class="footerContainer">
-		<div class="container">
-			Представленные на сайте данные имеют информационный характер и не являются публичной офертой.
-		</div>
-	</div>
-
-
-
-
-
-	<script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
-	<script src="js/jquery.js"></script>
-	<script
-  src="https://code.jquery.com/jquery-migrate-3.0.1.js"
-  integrity="sha256-VvnF+Zgpd00LL73P2XULYXEn6ROvoFaa/vbfoiFlZZ4="
-  crossorigin="anonymous"></script>
-	<script type="text/javascript" src="slick/slick.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-	<script src="js/bootstrap.js"></script>
-	<script src="js/script.js"></script>
+    </div>
+    <!-- footer -->
+    <div class="footerContainer">
+        <div class="container">
+            Представленные на сайте данные имеют информационный характер и не являются публичной офертой.
+        </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-3.0.1.js" integrity="sha256-VvnF+Zgpd00LL73P2XULYXEn6ROvoFaa/vbfoiFlZZ4=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="slick/slick.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/script.js"></script>
 </body>
+
 </html>
