@@ -20,7 +20,7 @@ var db = firebase.database().ref('businessData');
 ////////////////////////////////////////////////////////
 
 db.once('value', snap => {
-  var data = snap.val()['-LHaki-YYi1JceQBov7N'];
+  var data = snap.val();
     ////////////////////////
     putDataInHTML('.businessDescriptionMainHeader', data.name);
     putDataInHTML('.priceFinanceHeader', data.price);

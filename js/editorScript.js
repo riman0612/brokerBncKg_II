@@ -47,8 +47,9 @@ document.getElementById('editorData').onsubmit = (e) => {
     var messagesRef = firebase.database().ref('businessData');
 
     function saveMessage(name, price, rate, recoupment, profit, description, broker, city, region, section, middleMonthTurnovers, middleMonthCosts, amountOfWorkers, salary, area, rentPrice, businessAge, organizationalAndLegalForm) {
-        var newMessageRef = messagesRef.push();
-        newMessageRef.set({
+        // var newMessageRef = messagesRef.push();
+        
+        messagesRef.set({
             name: name,
             price: price,
             rate: rate,
@@ -67,7 +68,7 @@ document.getElementById('editorData').onsubmit = (e) => {
             rentPrice: rentPrice,
             businessAge: businessAge,
             organizationalAndLegalForm: organizationalAndLegalForm,
-            thisBusinessDataKey: newMessageRef.key
+            
         })
     };
 
