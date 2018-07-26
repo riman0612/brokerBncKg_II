@@ -12,9 +12,9 @@
 
 // scrolling
 $(document).ready(function() {
- 
- 
-   $(".howItWorksButton").click(function() {
+  
+   $('.howItWorksJs').bind('click', function(){
+      
       $("html, body").animate({
          scrollTop: $($(this).attr("href")).offset().top - 15 + "px"
       }, {
@@ -22,8 +22,8 @@ $(document).ready(function() {
          easing: "swing"
       });
       return false;
+      
    });
- 
  
 });
 
@@ -111,17 +111,9 @@ $(document).ready(function() {
 
 // было включено
 document.querySelector('.firstPageCardsPanelContainer').onmouseover = (e) => {
-
-
-    
-
     if (e.target.className == 'borderCard') {
-    
-        e.target.parentNode.querySelector('.opacityLayerBackground').style.opacity = 1;
-        
+      e.target.parentNode.querySelector('.opacityLayerBackground').style.opacity = 1;  
     };
-    
-
 };
 
 document.querySelector('.firstPageCardsPanelContainer').onmouseout = (e) => {
@@ -219,3 +211,21 @@ $('.nav-tabs a').on('click', function (e) {
 
   var db = firebase.database().ref();
 
+
+
+
+////////////////////////////////////////////////////////////
+document.querySelector('.hamburger').onclick = function(e) {
+  document.querySelector('.hamburger').classList.toggle("is-active");
+    // Do something else, like open/close menu
+    if (this.classList.contains('is-active')) {
+      (function(){
+      document.querySelector('.mainSkipMenu').style.display = 'block';
+      })()
+      setTimeout(() => {
+        document.querySelector('.skipMenu').classList.add('showMainSkipMenu');
+      }, 0)
+    } else {
+      document.querySelector('.skipMenu').classList.remove('showMainSkipMenu');
+    }
+ };

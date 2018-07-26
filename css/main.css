@@ -15,6 +15,69 @@ ul {
 
 /*****************************************END of Global****************************************/
 
+/*****************************************mainSkipMenu_(mobile)****************************************/
+.mainSkipMenu {
+	display: none;
+	z-index: 18;
+}
+.skipMenuContainer {
+	position: absolute;
+	z-index: 4;
+	display: flex;
+	justify-content: flex-end;
+	/*overflow-x: hidden;*/
+}
+.skipMenu {
+	padding: 7px 0;
+	min-width: 300px;
+	background: white;
+	border-radius: 4px;
+	border: 1px solid silver;	
+	display: flex;
+	flex-direction: column;
+	/*align-items: center;*/
+	position: fixed;
+	transition: .2s;
+	/*left: 18px;*/
+	right: -300px;
+	opacity: 0;
+}
+.skipMenu a li {
+	display: flex;
+	align-items: center;
+	height: 60px;
+	color: #5e5e5e;
+	/*background: lime;*/
+	/*border-bottom: 1px solid silver;*/
+	padding: 0 25px;
+}
+.skipMenu i {
+	color: silver;
+	font-size: 25px;
+}
+.skipMenu a:last-child li {
+	border-bottom: initial;
+}
+.mainSkipMenu {
+	display: none;
+	z-index: 18;
+}
+.showMainSkipMenu {
+	/*left: -1px;	*/
+	right: 0;
+	opacity: 1;
+}
+.underline {
+	border: .5px solid silver;
+	width: 83%;
+	align-self: center;
+}
+
+/*****************************************END of mainSkipMenu_(mobile)****************************************/
+
+/*****************************************END of Global****************************************/
+
+
 /*****************************************модальное окно на Вход и на Регистрацию (2 в 1)****************************************/
 .modalWrapper li {
 	flex: 1;
@@ -57,6 +120,7 @@ ul {
 }
 .desktopNavbarWrapper a {
 	color: white;
+	min-width: max-content;
 }
 .desktopNavbarWrapper a:hover {
 	text-decoration: underline;	
@@ -147,18 +211,61 @@ ul {
 /*****************************************END of desktop navbar****************************************/
 
 /*****************************************mobile navbar****************************************/
+.hamburgerLocal {
+	padding: 0;
+	position: relative;
+	top: -3.5px;
+	margin: 0 15px 0 80px;
+}
+.hamburgerLocal:focus {
+	outline: none;
+}
 .mobileNavbarWrapper {
 	background: #6e6e6e;
 	height: 54px;
 	color: white;
-	font-size: 2em;
-	text-align: center;
 	position: fixed;
 	width: 100%;
 	z-index: 3;
 }
 .mobileNavbarSpace {
 	height: 54px;
+}
+.mobileNavbar {
+	display: flex;
+	height: 100%;
+	align-items: center;
+	justify-content: flex-end;
+}
+.mobileInputButtonWrapper {
+	display: flex;
+	margin-left: 55px;
+	width: 100%;
+	height: 37px;
+	padding: 3px 4px 3px 10px;
+	background: #f6f6f6;
+	border-radius: 5px;
+}
+.mobileInputButtonWrapper input {
+	width: 100%;
+	border: none;
+	background: #f6f6f6;
+	outline: none;
+}
+.mobileInputButtonWrapper a {
+	border: none;
+	border-radius: 5px;
+	background: #28a745;
+	display: flex;
+	align-items: center;
+	padding: 0 7px;
+	color: white;
+}
+.mobileInputButtonWrapper a:hover {
+	cursor: pointer;
+}
+.mobileInputButtonWrapper a:focus {
+	outline: none;
 }
 /*****************************************END of mobile navbar****************************************/
 
@@ -213,28 +320,34 @@ ul {
 /*****************************************END of logo and buttons****************************************/
 
 /*****************************************howItWorksAndSearchBar****************************************/
+.howItWorksAndSearchBarMainWrapper {
+	display: flex;
+	justify-content: center;
+}
 .howItWorksAndSearchBar {
+	background: #ececec;
 	height: 45px;
 	display: flex;
+	align-items: center;
 	justify-content: space-between;
-	border: 1px solid #a2a2a2;	
+	border: 1px solid #d9d9d9;	
 	border-radius: 3px;
-	padding: 15px 0;
+	padding: 14px 0;
 	box-sizing: content-box;
 }
 .howItWorksButton {
-	height: 100%;
+	/*height: 100%;
 	border-radius: 5px;
 	background: orange;
 	cursor: pointer;
-	margin-left: 68px;
-	border: none;
+	*/margin-left: 158px;
+	/*border: none;
 	color: white;
 	padding: 0 15px;
 	box-shadow: 0px 7px 13px 0px rgba(209,209,209,1);
 	display: flex;
 	align-items: center;
-	transition: .3s;
+	transition: .3s;*/
 }
 .howItWorksButton:hover {
 	color: white;
@@ -247,28 +360,66 @@ ul {
 	height: 100%;
 	display: flex;
 	align-items: center;
-	background: silver;
+	background: #faf9f9;
+	border: 1px solid #d5d5d5;
 	border-radius: 5px;
-	padding: 0 12px;
+	padding: 0 4px 0 10px;
 	width: 400px;
 	margin-right: 88px;
+	height: 37px;
 }
 .searchInputWrapper input {
-	background: silver;
+	background: #faf9f9;
 	border: none;
 	outline: none;
 	font-size: 16px;
 	flex: 1;
+	margin-right: 10px;
 }
 .searchInputWrapper button {
 	border: none;
 	cursor: pointer;
-	background: white;
+	background: #28a745;
 	font-size: 13px;
 	height: 80%;
 	border-radius: 5px;
-	padding: 0 15px;
+	padding: 0 10px;
 	outline: none;
+	transition: .3s;
+	color: white;
+}
+.searchInputWrapper button:hover {
+	background: #1e7e34;
+}
+.howItWorksMobileButton {
+	background: #346ea6;
+	color: white;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	border-radius: 5px;
+	padding: 0 18px 0 23px;
+	transition: .3s;
+	box-shadow: 0px 7px 13px 0px rgba(209,209,209,1);
+	min-width: max-content;
+	height: 45px;
+}
+.howItWorksMobileButton:hover {
+	color: white;
+	background: #295885;
+}
+.howItWorksMobileButton:active {
+	box-shadow: none;
+}
+.howItWorksMobileButton img {
+	height: 25px;
+	margin-left: 18px;
+}
+.circle {
+	background: lime;
+	height: 30px;
+	width: 30px;
+	border-radius: 50%;
 }
 /*****************************************END of howItWorksAndSearchBar****************************************/
 
@@ -428,7 +579,7 @@ ul {
 	align-items: center;
 	justify-content: center;
 	height: 40px;
-	background: #ffffffc7;
+	background: #d1d0d0;
 	flex: 1;
 	color: black;
 	font-size: 15px;
@@ -436,7 +587,8 @@ ul {
 	transition: .3s;
 }
 .secondPageNavbarRow a:hover {
-	background: #fffffff2;
+	/*background: #fffffff2;*/
+	background: #dfdfdf;
 }
 .searchBarWrapper {
 	display: flex;
@@ -467,14 +619,14 @@ ul {
 	border-radius: 5px;
 	height: 40px;
 	width: 270px;
-	background: #ffffffc7;
+	background: #d1d0d0;
 	transition: .3s;
 	color: black;
 	align-items: center;
 	justify-content: center;
 }
 .secondPageMobileNavbarWrapper a:hover {
-	background: #fffffff2;
+	background: #dfdfdf;
 }
 /*****************************************END of second page cards panel****************************************/
 
