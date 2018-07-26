@@ -935,12 +935,74 @@ ul {
 /*****************************************END of third page about business****************************************/
 
 /*****************************************how it works panel****************************************/
+.howItWorksPanelWrapper {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+}
 .howItWorksPanel {
 	background: silver;
 	text-align: center;
+	border-radius: 5px;
+	padding: 25px;
+	margin-bottom: 29px;
+	max-width: 950px;
 }
 /*****************************************END of how it works panel****************************************/
 
+/*****************************************news block****************************************/
+.newsTitle {
+	font-size: 2em;
+	color: #565656;
+	margin-bottom: 5px;
+	align-self: flex-start;
+}
+.newsBlockWrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	max-width: 750px;
+}
+.newsBlock {
+	background: #d7d7d7;
+	border-radius: 5px;
+	margin-bottom: 20px;
+	padding: 15px;
+	width: 100%;	
+	display: flex;
+	flex-direction: column;
+}
+.newsCard {
+	display: flex;
+	height: 150px;
+	border: 1px solid #8f8f8f;
+	border-radius: 3px;
+	margin-bottom: 13px;
+}
+.newsCard img {
+	height: 100%;
+	max-width: 197px;
+}
+.newsCardTextWrapper {
+	padding: 15px;
+}
+.newsCardTitle {
+	font-size: 1.1em;
+	margin-bottom: 12px;
+}
+.allNewsButton {
+	padding: 10px 30px;
+	border-radius: 5px;
+	background: #2b8bca;
+	color: white;
+	width: 250px;
+	align-self: center;
+	margin: 35px 0;
+	min-width: max-content;
+	text-align: center;
+}
+/*****************************************END of news block****************************************/
 
 /*****************************************footer****************************************/
 .footerContainer {
