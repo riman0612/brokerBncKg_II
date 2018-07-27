@@ -320,20 +320,38 @@ ul {
 /*****************************************END of logo and buttons****************************************/
 
 /*****************************************howItWorksAndSearchBar****************************************/
+.moreInfo:hover {
+	background: #218b39;
+}
+.moreInfo {
+	margin: 35px 0 15px;
+	transition: .3s;
+	background: #28a745;
+	display: flex;
+	justify-content: center;
+	height: 40px;
+	box-shadow: 0px 7px 13px 0px rgba(209,209,209,1);
+	cursor: pointer;
+	align-items: center;
+	border-radius: 5px;
+	width: 150px;
+	color: white !important;
+
+}
 .howItWorksAndSearchBarMainWrapper {
 	display: flex;
 	justify-content: center;
 }
 .howItWorksAndSearchBar {
 	background: #ececec;
-	height: 45px;
+	height: 75px;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	border: 1px solid #d9d9d9;	
 	border-radius: 3px;
 	padding: 14px 0;
-	box-sizing: content-box;
+	box-sizing: border-box;
 }
 .howItWorksButton {
 	/*height: 100%;
@@ -939,15 +957,17 @@ ul {
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
-	align-items: center;
 }
 .howItWorksPanel {
-	background: silver;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	background: #ececec;
 	text-align: center;
 	border-radius: 5px;
 	padding: 25px;
 	margin-bottom: 29px;
-	max-width: 950px;
 }
 /*****************************************END of how it works panel****************************************/
 
@@ -965,7 +985,7 @@ ul {
 	max-width: 750px;
 }
 .newsBlock {
-	background: #d7d7d7;
+	background: #ececec;
 	border-radius: 5px;
 	margin-bottom: 20px;
 	padding: 15px;
@@ -973,7 +993,12 @@ ul {
 	display: flex;
 	flex-direction: column;
 }
+.newsCard:hover {
+	background: #dddddd;
+}
 .newsCard {
+	transition: .3s;
+	cursor: pointer;
 	display: flex;
 	height: 150px;
 	border: 1px solid #8f8f8f;
@@ -991,7 +1016,16 @@ ul {
 	font-size: 1.1em;
 	margin-bottom: 12px;
 }
+.allNewsButton:active {
+	box-shadow: none;
+}
+.allNewsButton:hover {
+	color: white;
+	background: #2170a4;
+}
 .allNewsButton {
+	transition: .3s;
+	box-shadow: 0px 7px 13px 0px rgba(209,209,209,1);
 	padding: 10px 30px;
 	border-radius: 5px;
 	background: #2b8bca;
@@ -1003,6 +1037,25 @@ ul {
 	text-align: center;
 }
 /*****************************************END of news block****************************************/
+
+/*****************************************training****************************************/
+.training {
+	background: #ececec;
+	border-radius: 5px;
+}
+/*****************************************END of training****************************************/
+
+/*****************************************aboutUsSection****************************************/
+.aboutUsSectionWrapper {
+	display: flex;
+	justify-content: center;
+}
+.aboutUsSection {
+	border-radius: 5px;
+	background: #ececec;
+	margin: 20px;
+} 
+/*****************************************END of aboutUsSection****************************************/
 
 /*****************************************footer****************************************/
 .footerContainer {
